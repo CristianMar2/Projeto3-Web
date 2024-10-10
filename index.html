@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festa de Aniversário do Cristian</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Festa de Aniversário do Cristian</h1>
+            <p>Venha comemorar com a gente!</p>
+        </div>
+    </header>
+
+    <section class="info">
+        <div class="container">
+            <h2>Detalhes da Festa</h2>
+            <p>Você está convidado para a grande festa de aniversário do Cristian! Teremos muita diversão, música, comida e momentos inesquecíveis.</p>
+            <p><strong>Data:</strong> 10 de Novembro de 2024</p>
+            <p><strong>Local:</strong> Espaço Alegria, São Paulo, SP</p>
+            <p><strong>Horário:</strong> 18:00h às 23:00h</p>
+            <p><strong>Traje:</strong> Casual</p>
+            <a href="#faq" class="button">Perguntas Frequentes</a>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>FAQ - Perguntas Frequentes</h2>
+            <div class="faq-item">
+                <h3 class="faq-question">Há estacionamento no local?</h3>
+                <div class="faq-answer">
+                    <p>Sim, o local oferece estacionamento gratuito para todos os convidados.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Posso levar um presente?</h3>
+                <div class="faq-answer">
+                    <p>A presença de todos já é um presente! Mas se desejar, o Cristian adoraria ganhar algo simbólico, como um livro ou um acessório.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Haverá comida e bebida no local?</h3>
+                <div class="faq-answer">
+                    <p>Sim! Teremos um buffet com diversas opções de comida, incluindo opções vegetarianas, e bebidas à vontade.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Posso levar um acompanhante?</h3>
+                <div class="faq-answer">
+                    <p>Claro! Todos estão convidados a trazer um acompanhante para curtir a festa com a gente!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <hr>
+            <p>&copy; 2024 Festa de Aniversário do Cristian - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Expandir e recolher FAQ
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
