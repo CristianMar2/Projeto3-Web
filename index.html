@@ -14,72 +14,73 @@
         <p>Venha comemorar com a gente!</p>
       </div>
     </header>
+    <main>
+      <section class="info">
+        <div class="container">
+          <h2>Detalhes da Festa</h2>
+          <p>
+            Você está convidado para a grande festa de aniversário do Cristian!
+            Teremos muita diversão, música, comida e momentos inesquecíveis.
+          </p>
+          <p>
+            <strong>Data:</strong> 14 de Fevereiro de
+            <span id="anoAtual"></span>
+          </p>
+          <p><strong>Local:</strong> Espaço Sol e Lua, Pires do Rio, GO</p>
+          <p><strong>Horário:</strong> 18:00h às 03:00h</p>
+          <p><strong>Traje:</strong> Casual</p>
+          <a href="#faq" class="button">Perguntas Frequentes</a>
+        </div>
+      </section>
 
-    <section class="info">
-      <div class="container">
-        <h2>Detalhes da Festa</h2>
-        <p>
-          Você está convidado para a grande festa de aniversário do Cristian!
-          Teremos muita diversão, música, comida e momentos inesquecíveis.
-        </p>
-        <p>
-          <strong>Data:</strong> 14 de Fevereiro de <span id = "anoAtual"></span></p>
-        <p><strong>Local:</strong> Espaço Sol e Lua, Pires do Rio, GO</p>
-        <p><strong>Horário:</strong> 18:00h às 03:00h</p>
-        <p><strong>Traje:</strong> Casual</p>
-        <a href="#faq" class="button">Perguntas Frequentes</a>
-      </div>
-    </section>
+      <section class="faq" id="faq">
+        <div class="container">
+          <h2>FAQ - Perguntas Frequentes</h2>
+          <div class="faq-item">
+            <h3 class="faq-question">Há estacionamento no local?</h3>
+            <div class="faq-answer">
+              <p>
+                Sim, o local oferece estacionamento gratuito para todos os
+                convidados, a rua.
+              </p>
+            </div>
+          </div>
 
-    <section class="faq" id="faq">
-      <div class="container">
-        <h2>FAQ - Perguntas Frequentes</h2>
-        <div class="faq-item">
-          <h3 class="faq-question">Há estacionamento no local?</h3>
-          <div class="faq-answer">
-            <p>
-              Sim, o local oferece estacionamento gratuito para todos os
-              convidados, a rua.
-            </p>
+          <div class="faq-item">
+            <h3 class="faq-question">Posso levar um presente?</h3>
+            <div class="faq-answer">
+              <p>Lógico, já viu festa sem presente?.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Haverá comida e bebida no local?</h3>
+            <div class="faq-answer">
+              <p>
+                Sim! Teremos um buffet com diversas opções de comida, levar o
+                que for beber.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Posso levar um acompanhante?</h3>
+            <div class="faq-answer">
+              <p>
+                Claro! Todos estão convidados a trazer um acompanhante para
+                curtir a festa com a gente!
+              </p>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="faq-item">
-          <h3 class="faq-question">Posso levar um presente?</h3>
-          <div class="faq-answer">
-            <p>Lógico, já viu festa sem presente?.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <h3 class="faq-question">Haverá comida e bebida no local?</h3>
-          <div class="faq-answer">
-            <p>
-              Sim! Teremos um buffet com diversas opções de comida, levar o que
-              for beber.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <h3 class="faq-question">Posso levar um acompanhante?</h3>
-          <div class="faq-answer">
-            <p>
-              Claro! Todos estão convidados a trazer um acompanhante para curtir
-              a festa com a gente!
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id = "musica">
+      <section id="musica">
         <audio id="musica" autoplay controls>
-            <source src="musica/musica.mp3" type="audio/mp3">
+          <source src="musica/musica.mp3" type="audio/mp3" />
         </audio>
-        
-    </section>
-
+      </section>
+    </main>
     <footer>
       <div class="container">
         <hr />
@@ -100,12 +101,12 @@
         });
       });
       function mostrarAno() {
-      const data = new Date();
-      const ano = data.getFullYear() + 1;
-      document.getElementById("anoAtual").innerHTML += ano;
-    }
-    // Chama a função para exibir o ano ao carregar a página
-    mostrarAno();
+        const data = new Date();
+        const ano = data.getFullYear() + 1;
+        document.getElementById("anoAtual").innerHTML += ano;
+      }
+      // Chama a função para exibir o ano ao carregar a página
+      mostrarAno();
     </script>
   </body>
 </html>
