@@ -1,4 +1,4 @@
-/* Estilos Gerais */
+/* Reset e Configuração Geral */
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +18,7 @@ body {
     padding: 0 20px;
 }
 
+/* Estilo para o Header */
 header {
     background: #47a6ff;
     color: white;
@@ -35,6 +36,7 @@ header p {
     margin-top: 10px;
 }
 
+/* Estilo para a Seção de Informações */
 .info {
     background: white;
     padding: 40px 20px;
@@ -60,12 +62,14 @@ header p {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 .button:hover {
-    background-color: #47a6ff;
+    background-color: #005f99;
 }
 
+/* Estilo para a Seção FAQ */
 .faq {
     background: #f9f9f9;
     padding: 40px 20px;
@@ -88,6 +92,11 @@ header p {
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background: #005f99;
 }
 
 .faq-answer {
@@ -98,6 +107,100 @@ header p {
     margin-top: 10px;
 }
 
+/* Estilo para o Formulário */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+form h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    width: 100%;
+    background-color: #47a6ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005f99;
+}
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .info h2,
+    .faq h2 {
+        font-size: 1.5em;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form h2 {
+        font-size: 1.5em;
+    }
+
+    input,
+    textarea {
+        font-size: 0.9em;
+    }
+
+    button {
+        font-size: 1em;
+    }
+}
+
+/* Estilo para o Rodapé */
 footer {
     background: #333;
     color: white;

@@ -15,6 +15,7 @@
       </div>
     </header>
     <main>
+      <!-- Seção com informações sobre a festa -->
       <section class="info">
         <div class="container">
           <h2>Detalhes da Festa</h2>
@@ -33,6 +34,7 @@
         </div>
       </section>
 
+      <!-- Seção FAQ para responder perguntas comuns -->
       <section class="faq" id="faq">
         <div class="container">
           <h2>FAQ - Perguntas Frequentes</h2>
@@ -75,12 +77,43 @@
         </div>
       </section>
 
-      <section id="musica">
-        <audio id="musica" autoplay controls>
-          <source src="musica/musica.mp3" type="audio/mp3" />
-        </audio>
+      <!-- Seção com formulário de contato -->
+      <section id="contato">
+        <div class="container">
+          <h2>Entre em Contato</h2>
+          <!-- Formulário para enviar mensagens -->
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" required 
+              placeholder="Digite seu nome"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" required 
+              placeholder="Digite seu e-mail"
+              />
+            </div>
+            <div class="form-group">
+              <label for="assunto">Assunto:</label>
+              <input type="text" id="assunto" name="assunto" required
+                placeholder="Digite o assunto da mensagem"/>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem:</label>
+              <textarea id="mensagem" name="mensagem" rows="5" required
+              placeholder="Digite sua mensagem aqui"
+              ></textarea>
+            </div>
+            <!-- Botão para enviar o formulário -->
+            <button id="submit">Enviar Mensagem</button>
+          </form>
+        </div>
       </section>
     </main>
+
+    <!-- Rodapé -->
     <footer>
       <div class="container">
         <hr />
@@ -91,21 +124,32 @@
       </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
-      // Expandir e recolher FAQ
+
+      // Exibe mensagem ao clicar no botão de envio
+      document.getElementById("submit").addEventListener("click", funSubmit);
+
+      function funSubmit() {
+        alert("Essa funcionalidade não está implementada ainda!");
+      }
+
+      // Função para alternar exibição de perguntas e respostas no FAQ
       document.querySelectorAll(".faq-question").forEach((item) => {
         item.addEventListener("click", () => {
-          const answer = item.nextElementSibling;
+          const answer = item.nextElementSibling; // Seleciona a resposta associada
           answer.style.display =
-            answer.style.display === "block" ? "none" : "block";
+            answer.style.display === "block" ? "none" : "block"; // Alterna a exibição
         });
       });
+
+      // Script para exibir o ano atual na página
       function mostrarAno() {
         const data = new Date();
-        const ano = data.getFullYear() + 1;
-        document.getElementById("anoAtual").innerHTML += ano;
+        const ano = data.getFullYear();
+        document.getElementById("anoAtual").textContent = ano;
       }
-      // Chama a função para exibir o ano ao carregar a página
+      // Chama a função ao carregar a página
       mostrarAno();
     </script>
   </body>
